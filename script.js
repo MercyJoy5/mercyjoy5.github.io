@@ -24,10 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Clear the form
         form.reset();
-        const toggle = document.getElementById("themeToggle");
+       const toggle = document.getElementById("themeToggle");
 
 toggle.addEventListener("click", function () {
-    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
+});
+
 });
 
     });
