@@ -80,20 +80,6 @@ section {
 }
 
 /* Content Card */
-.content {
-    max-width: 800px;
-    margin: 0 auto;   /* centers horizontally only */
-    background: var(--card);
-    padding: 50px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px var(--shadow);
-}
 
 /* Paragraph spacing */
 p {
