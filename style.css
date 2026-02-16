@@ -41,6 +41,26 @@ body {
     color: var(--text);
     transition: all 0.3s ease;
 }
+/* Passport Image Styling */
+.passport {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--border);
+    box-shadow: 
+        0 0 0 4px rgba(79, 140, 255, 0.15),
+        0 12px 30px var(--shadow);
+    margin-bottom: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.passport:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 0 0 6px rgba(79, 140, 255, 0.25),
+        0 18px 40px var(--shadow);
+}
 
 /* Headings */
 h1, h2, h3 {
