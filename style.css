@@ -1,23 +1,27 @@
-/* Light Mode (default) */
+/* ===== Google Fonts Applied ===== */
+/* Headings: Poppins */
+/* Body: Open Sans */
+
+/* Root Variables – Slightly Dark Default */
 :root {
-    --bg: #eef1f5;
-    --card: #ffffff;
-    --text: #1f2933;
-    --accent: #2563eb;      /* Cool blue */
-    --accent-hover: #1d4ed8;
-    --border: #d1d5db;
-    --shadow: rgba(0, 0, 0, 0.06);
+    --bg: #161b22;
+    --card: #1f2630;
+    --text: #e6edf3;
+    --accent: #4f8cff;
+    --accent-hover: #3b74d9;
+    --border: #2d3748;
+    --shadow: rgba(0, 0, 0, 0.35);
 }
 
-/* Dark Mode */
-body.dark {
-    --bg: #111827;          /* Soft dark */
-    --card: #1f2937;
-    --text: #e5e7eb;
-    --accent: #38bdf8;      /* Cool sky blue */
-    --accent-hover: #0ea5e9;
-    --border: #374151;
-    --shadow: rgba(0, 0, 0, 0.3);
+/* Light Mode (optional toggle) */
+body.light {
+    --bg: #f4f6f9;
+    --card: #ffffff;
+    --text: #1f2933;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --border: #d1d5db;
+    --shadow: rgba(0, 0, 0, 0.08);
 }
 
 /* Reset */
@@ -29,79 +33,79 @@ body.dark {
 
 /* Body */
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    letter-spacing: 0.3px;
     background: var(--bg);
     color: var(--text);
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-/* Toggle Button */
-.toggle-btn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 8px 16px;
-    border-radius: 20px;
-    border: none;
-    background: var(--accent);
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.toggle-btn:hover {
-    background: var(--accent-hover);
-}
-
-/* Sections */
-section {
-    width: 80%;
-    margin: 60px auto;
-    padding: 40px;
-    background: var(--card);
-    border-radius: 10px;
-    box-shadow: 0 8px 20px var(--shadow);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-/* Subtle hover lift */
-section:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 28px var(--shadow);
+    transition: all 0.3s ease;
 }
 
 /* Headings */
-h1, h2 {
-    margin-bottom: 20px;
-    font-weight: 700;
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
     color: var(--accent);
+}
+
+/* Sections – Centered Layout */
+section {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* Content Card */
+.content {
+    max-width: 700px;
+    background: var(--card);
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px var(--shadow);
+}
+
+/* Paragraph spacing */
+p {
+    margin-bottom: 16px;
 }
 
 /* Image */
 img {
-    border-radius: 8px;
-    margin-bottom: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
     transition: transform 0.3s ease;
 }
 
 img:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
 }
 
-/* Services */
+/* Lists */
 ul {
     list-style: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 ul li {
-    padding: 8px 0;
-    transition: color 0.3s ease, padding-left 0.3s ease;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
 }
 
 ul li:hover {
     color: var(--accent);
-    padding-left: 6px;
 }
 
 /* Form */
@@ -111,9 +115,9 @@ input, textarea {
     margin-bottom: 15px;
     border-radius: 6px;
     border: 1px solid var(--border);
-    font-size: 14px;
     background: transparent;
     color: var(--text);
+    font-size: 14px;
     transition: 0.3s ease;
 }
 
@@ -122,7 +126,12 @@ input:focus, textarea:focus {
     border-color: var(--accent);
 }
 
-/* Submit Button */
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* Buttons */
 button {
     padding: 10px 22px;
     border-radius: 25px;
@@ -139,10 +148,16 @@ button:hover {
     transform: translateY(-2px);
 }
 
+/* Toggle Button */
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
-    section {
-        width: 92%;
-        padding: 25px;
+    .content {
+        padding: 30px;
     }
 }
