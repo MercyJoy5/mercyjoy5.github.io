@@ -1,26 +1,22 @@
 /* Light Mode (default) */
 /* Light Mode (default) */
+/* Root Variables – Slightly Dark Default */
 :root {
+    --bg: #161b22;
+    --text: #e6edf3;
+    --accent: #4f8cff;
+    --accent-hover: #3b74d9;
+    --border: #2d3748;
+}
+
+/* Light Mode */
+body.light {
     --bg: #f4f6f9;
-    --card: #ffffff;
     --text: #1f2933;
-    --accent: #4f46e5;
-    --hover: #4338ca;
-    --shadow: rgba(0, 0, 0, 0.08);
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
     --border: #d1d5db;
 }
-
-/* Dark Mode */
-body.dark {
-    --bg: #0f172a;
-    --card: #1e293b;
-    --text: #e2e8f0;
-    --accent: #6366f1;
-    --hover: #818cf8;
-    --shadow: rgba(0, 0, 0, 0.4);
-    --border: #334155;
-}
-
 /* Reset */
 * {
     margin: 0;
