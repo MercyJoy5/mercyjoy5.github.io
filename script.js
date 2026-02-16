@@ -1,23 +1,29 @@
-// Show welcome message when page loads
-window.addEventListener("load", function () {
-    console.log("Portfolio loaded successfully!");
-});
+// Wait until the page fully loads
+document.addEventListener("DOMContentLoaded", function () {
 
-// Simple form validation message
-document.querySelector("form").addEventListener("submit", function (event) {
-    event.preventDefault(); // prevent page reload
+    const form = document.querySelector("form");
 
-    alert("Thank you for contacting me! I will get back to you soon.");
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Stop page refresh
 
-    this.reset(); // clear form after submission
-});
+        // Capture form values
+        const name = form.querySelector('input[placeholder="Full Name"]').value;
+        const email = form.querySelector('input[placeholder="Email Address"]').value;
+        const address = form.querySelector('input[placeholder="Physical Address"]').value;
+        const contact = form.querySelector('input[placeholder="Contact Number"]').value;
+        const message = form.querySelector('textarea').value;
 
-// Smooth scroll for internal links (if added later)
-document.querySelectorAll("a[href^='#']").forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth"
-        });
+        // Simple validation check
+        if (!name || !email || !address || !contact || !message) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        // Display success message
+        alert("Thank you, " + name + "! Your message has been received.");
+
+        // Clear the form
+        form.reset();
     });
+
 });
