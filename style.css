@@ -1,24 +1,24 @@
 /* Light Mode (default) */
 /* Light Mode (default) */
 :root {
-    --bg: #eef1f5;
+    --bg: #f4f6f9;
     --card: #ffffff;
     --text: #1f2933;
-    --accent: #2563eb;      
-    --accent-hover: #1d4ed8;
+    --accent: #4f46e5;
+    --hover: #4338ca;
+    --shadow: rgba(0, 0, 0, 0.08);
     --border: #d1d5db;
-    --shadow: rgba(0, 0, 0, 0.06);
 }
 
 /* Dark Mode */
 body.dark {
-    --bg: #111827;          
-    --card: #1f2937;
-    --text: #e5e7eb;
-    --accent: #38bdf8;      
-    --accent-hover: #0ea5e9;
-    --border: #374151;
-    --shadow: rgba(0, 0, 0, 0.3);
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #e2e8f0;
+    --accent: #6366f1;
+    --hover: #818cf8;
+    --shadow: rgba(0, 0, 0, 0.4);
+    --border: #334155;
 }
 
 /* Reset */
