@@ -1,2 +1,2 @@
 # mercyjoy5.github.io
-Mercy Joy Skilled IT Student
+Personal E-portfolio with HTML, CSS and JavaScript elements hosted by GitHub
