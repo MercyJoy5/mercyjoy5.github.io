@@ -1,24 +1,25 @@
-/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
-/* Root Variables (Light Mode Default) */
+/* Light Mode (default) */
 :root {
-    --bg: #f4f6f9;
+    --bg: #eef1f5;
     --card: #ffffff;
     --text: #1f2933;
-    --accent: #4f46e5;
-    --hover: #4338ca;
-    --shadow: rgba(0, 0, 0, 0.08);
+    --accent: #2563eb;      /* Cool blue */
+    --accent-hover: #1d4ed8;
+    --border: #d1d5db;
+    --shadow: rgba(0, 0, 0, 0.06);
 }
 
 /* Dark Mode */
 body.dark {
-    --bg: #0f172a;
-    --card: #1e293b;
-    --text: #e2e8f0;
-    --accent: #6366f1;
-    --hover: #818cf8;
-    --shadow: rgba(0, 0, 0, 0.4);
+    --bg: #111827;          /* Soft dark */
+    --card: #1f2937;
+    --text: #e5e7eb;
+    --accent: #38bdf8;      /* Cool sky blue */
+    --accent-hover: #0ea5e9;
+    --border: #374151;
+    --shadow: rgba(0, 0, 0, 0.3);
 }
 
 /* Reset */
@@ -33,7 +34,7 @@ body {
     font-family: 'Inter', sans-serif;
     background: var(--bg);
     color: var(--text);
-    transition: all 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* Toggle Button */
@@ -46,14 +47,13 @@ body {
     border: none;
     background: var(--accent);
     color: white;
-    cursor: pointer;
     font-weight: 600;
+    cursor: pointer;
     transition: 0.3s ease;
 }
 
 .toggle-btn:hover {
-    background: var(--hover);
-    transform: scale(1.05);
+    background: var(--accent-hover);
 }
 
 /* Sections */
@@ -62,15 +62,15 @@ section {
     margin: 60px auto;
     padding: 40px;
     background: var(--card);
-    border-radius: 12px;
-    box-shadow: 0 10px 25px var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px var(--shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Section Hover */
+/* Subtle hover lift */
 section:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px var(--shadow);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px var(--shadow);
 }
 
 /* Headings */
@@ -82,28 +82,28 @@ h1, h2 {
 
 /* Image */
 img {
-    border-radius: 10px;
+    border-radius: 8px;
     margin-bottom: 15px;
     transition: transform 0.3s ease;
 }
 
 img:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
-/* Services List */
+/* Services */
 ul {
     list-style: none;
 }
 
 ul li {
-    padding: 10px 0;
-    transition: color 0.3s ease;
+    padding: 8px 0;
+    transition: color 0.3s ease, padding-left 0.3s ease;
 }
 
 ul li:hover {
     color: var(--accent);
-    padding-left: 8px;
+    padding-left: 6px;
 }
 
 /* Form */
@@ -111,27 +111,23 @@ input, textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    border: 1px solid var(--border);
     font-size: 14px;
+    background: transparent;
+    color: var(--text);
     transition: 0.3s ease;
 }
 
 input:focus, textarea:focus {
     outline: none;
     border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
 }
 
-textarea {
-    resize: none;
-    height: 100px;
-}
-
-/* Button */
+/* Submit Button */
 button {
-    padding: 12px 25px;
-    border-radius: 30px;
+    padding: 10px 22px;
+    border-radius: 25px;
     border: none;
     background: var(--accent);
     color: white;
@@ -141,5 +137,14 @@ button {
 }
 
 button:hover {
-    background: var(--hover);
-    tran
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    section {
+        width: 92%;
+        padding: 25px;
+    }
+}
