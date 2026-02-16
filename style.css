@@ -40,8 +40,9 @@ body {
 }
 
 /* Sections – Normal Document Flow */
+/* Sections – Normal Flow Layout */
 section {
-    margin-bottom: 60px;
+    padding: 60px 10%;
 }
 
 /* Headings */
